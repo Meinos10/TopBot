@@ -26,6 +26,7 @@ async def all(client: Bot, message):
 		if message.chat.id == -1001763513991:
 			try:
 				await message.copy(message.chat.id)
+				await asyncio.sleep(0.5)
 			except FloodWait as e:
 				time.sleep(e.value)
 				await message.copy(message.chat.id)
