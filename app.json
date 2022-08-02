@@ -1,0 +1,13 @@
+{
+	"name": "TopCombot",
+	"env": {
+		"STRING": {
+			"description": "Pyrogram V2 session"
+		}
+	},
+	"builspacks": [
+		{
+			"url": "heroku/python"
+		}
+	]
+}
