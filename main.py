@@ -11,8 +11,6 @@ Bot = Client(
 	session_string=session
 )
 
-with Bot as client:
-	print("Bot çalışıyor!")
 
 
 user_send = []
@@ -32,5 +30,5 @@ async def all(client: Bot, message):
 				time.sleep(e.value)
 				await message.copy(message.chat.id)
 
-
+print("Bot çalıştırılıyor!")
 Bot.run()
