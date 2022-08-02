@@ -1,7 +1,6 @@
 from pyrogram import Client, filters, enums
 from config import *
-import asyncio
-import os
+import asyncio, time
 from pyrogram.errors import FloodWait
 
 Bot = Client(
