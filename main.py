@@ -19,10 +19,14 @@ async def all(client: Bot, message):
 	global user_send
 	if message.chat.type == enums.ChatType.PRIVATE:
 		if not message.chat.id in user_send:
-			await client.send_message(message.chat.id, "**Selam ben @ReWoxi tarafından kodlanmış bir yazılımım!\n\nGrubumuzda bir deneme yapıyoruz.\n\nAcaba botlarla @Combot sıralamasında ilk 5 e girebilir miyiz?\n\nGrubumuz: https://t.me/BuGrupTop5**")
+			chat = await client.get_chat(ids)
+			sohbet = ""
+			if not str(chat.username) == "None":
+				sohbet = "https://t.me/"+chat.username
+			await client.send_message(message.chat.id, f"**Selam ben @ReWoxi tarafından kodlanmış bir yazılımım!\n\nGrubumuzda bir deneme yapıyoruz.\n\nAcaba botlarla @Combot sıralamasında ilk 5 e girebilir miyiz?\n\n{sohbet}**")
 			user_send.append(message.chat.id)
 	else:
-		if message.chat.id == -1001763513991:
+		if message.chat.id == ids:
 			try:
 				await message.copy(message.chat.id)
 				await asyncio.sleep(0.5)
