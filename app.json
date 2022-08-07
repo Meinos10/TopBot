@@ -3,6 +3,9 @@
 	"env": {
 		"STRING": {
 			"description": "Pyrogram V2 session"
+		},
+		"ID": {
+			"description": "Chat ID"
 		}
 	},
 	"builspacks": [
