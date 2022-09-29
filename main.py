@@ -23,7 +23,7 @@ async def all(client: Bot, message):
 			sohbet = ""
 			if not str(chat.username) == "None":
 				sohbet = "https://t.me/"+chat.username
-			await client.send_message(message.chat.id, f"**Selam ben @ReWoxi tarafından kodlanmış bir yazılımım!\n\nGrubumuzda bir deneme yapıyoruz.\n\nAcaba botlarla @Combot sıralamasında ilk 5 e girebilir miyiz?\n\n{sohbet}**")
+			await client.send_message(message.chat.id, f"**Selam ben @BOT_RAMO tarafından kodlanmış bir yazılımım!\n\nGrubumuzda bir deneme yapıyoruz.\n\nAcaba botlarla @Combot sıralamasında ilk 5 e girebilir miyiz?\n\n{sohbet}**")
 			user_send.append(message.chat.id)
 	else:
 		if message.chat.id == ids:
